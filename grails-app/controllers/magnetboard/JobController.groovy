@@ -121,11 +121,12 @@ class JobController {
 			def today = new Date()
 			jobInstance.DC_cell = params.cell
 			jobInstance.DC_date = today
-			jobInstance.DC_A_T = params.A_T
-			jobInstance.DC_A_B = params.A_B
+			jobInstance.DC_A_T = params.areaTop
+			jobInstance.DC_A_B = params.areaBottom
 			jobInstance.DC_spec = params.spec
 			jobInstance.DC_operator = params.operator
-			jobInstance.DC_cuThickDist = params.cuThicknessDist
+			jobInstance.DC_minCuDeposit = params.minCuDeposit
+			jobInstance.DC_maxCuDeposit = params.maxCuDeposit
 		    redirect(controller: "machine", action: "addJobDataList")
 		}
 		else {
@@ -134,6 +135,11 @@ class JobController {
 		}
 	}
 	
+	def dcplatingSearch = {
+		def searchJob = magnetboard.Job.findAllWhere(["jobname": params.jobName])
+		println searchJob
+		redirect(controller: "machine", action: "addJobDataList")
+	}
     def update = {
         def jobInstance = Job.get(params.id)
 		def process1 = jobInstance.process?.canister

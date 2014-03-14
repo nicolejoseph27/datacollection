@@ -93,8 +93,10 @@
                             <div class="job" style = "float:left">
             				<span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
         					</div>   
-        					
-                            <div class="job" style = "float:right"> 
+        					<div class="job" style = "float:right"> 
+                   	 		<g:link controller="machineVariable" action="list" style="color:#228B22;text-transform:capitalize">List Maintenance Events</g:link>
+               				</div>
+                            <div class="job" style = "float:left"> 
                    	 		<jque:newShowDialog buttonCaption="Air Quality" dialogId="airquality" />
                				</div>      
                             </g:if>

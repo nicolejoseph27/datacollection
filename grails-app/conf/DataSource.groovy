@@ -23,8 +23,22 @@ environments {
     }
     test {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:mysql://localhost:3306/magnet?autoreconnect=true"
+            url = "jdbc:mysql://localhost:3306/magnet_test?zeroDateTimeBehavior=convertToNull"
+            pooled = true
+            driverClassName = "com.mysql.jdbc.Driver"
+            username = "tombrown"
+            password = "1@wr3nc3"
+            loggingSql = false
+        }
+		properties {
+			maxActive = 50
+			maxIdle = 25
+			minIdle = 5
+			initialSize = 5
+			minEvictableIdleTimeMillis = 3600000  // 1 hour
+			timeBetweenEvictionRunsMillis = 300000 // 5 minutes
+			numTestsPerEvictionRun = 5
+			maxWait = 10000
         }
     }
     production {

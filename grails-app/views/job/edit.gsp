@@ -226,10 +226,17 @@
                         
                             <tr class="prop2">
                                 <td valign="top" class="name">
-                                  <label for="DC_cuThickDist"><g:message code="job.DC_cuThickDist.label" default="DC Plating cu Thickness Distribution" /></label>
+                                  <label for="DC_minCuDeposit"><g:message code="DC_minCuDeposit.label" default="DC Plating minimum Cu Deposit" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'DC_cuThickDist', 'errors')}">
-                                    <g:textField name="DC_cuThickDist" value="${jobInstance?.DC_cuThickDist}" />
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'DC_minCuDeposit', 'errors')}">
+                                    <g:textField name="DC_minCuDeposit" value="${jobInstance?.DC_minCuDeposit}" />
+                                </td>
+                                
+                                <td valign="top" class="name">
+                                  <label for="DC_maxCuDeposit"><g:message code="DC_maxCuDeposit.label" default="DC Plating maximum Cu Deposit" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'DC_maxCuDeposit', 'errors')}">
+                                    <g:textField name="DC_maxCuDeposit" value="${jobInstance?.DC_maxCuDeposit}" />
                                 </td>
                               
                         </tbody>

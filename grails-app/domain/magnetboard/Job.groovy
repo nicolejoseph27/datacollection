@@ -33,7 +33,8 @@ String DC_A_T
 String DC_A_B
 String DC_spec
 String DC_operator
-String DC_cuThickDist
+String DC_minCuDeposit
+String DC_maxCuDeposit
 Date DC_date
 
 
@@ -45,7 +46,8 @@ static constraints = {process(nullable:true)
 					DC_A_B(nullable:true)
 					DC_spec(nullable:true)
 					DC_operator(nullable:true)
-					DC_cuThickDist(nullable:true)
+					DC_minCuDeposit(nullable:true)
+					DC_maxCuDeposit(nullable:true)
 					DC_date(nullable:true)
 					PEP_date(nullable:true)
 }

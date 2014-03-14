@@ -148,11 +148,11 @@
                         </tr>
                     
                         <tr class="prop2">
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_A_T.label" default="DC Plating A_T"/></td>
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_A_T.label" default="DC Plating Area Top"/></td>
                             
                             <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_A_T")}</td>
                             
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_A_B.label" default="DC Plating A_B"/></td>
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_A_B.label" default="DC Plating Area Bottom"/></td>
                             
                             <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_A_B")}</td>
                        </tr>
@@ -170,9 +170,13 @@
                     
                     	 <tr class="prop">
                             
-                           <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_cuThickDist.label" default="DC Plating cu Thickness Distribution"/></td>
+                           <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_minCuDeposit.label" default="DC Plating Minimum Cu Deposit"/></td>
                             
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_cuThickDist")}</td>
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_minCuDeposit")}</td>
+                            
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_maxCuDeposit.label" default="DC Plating Maximum Cu Deposit"/></td>
+                            
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_maxCuDeposit")}</td>
                         </tr>
                    
                     </tbody>

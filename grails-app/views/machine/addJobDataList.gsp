@@ -57,17 +57,17 @@
     		<jque:newDialog controller='job' action="dcplating" ajax="false" id='dcplating' title="DC Plating Variables" success="s_div2" width="600">
     		<jque:dialogField name="workorder" value="" />
     		<jque:dialogField name="cell" value="" />
-    		<jque:dialogField name="A_T" value="" />
-    		<jque:dialogField name="A_B" value="" />
+    		<jque:dialogField name="areaTop" value="" />
+    		<jque:dialogField name="areaBottom" value="" />
     		<jque:dialogField name="spec" value="" />
     		<jque:dialogField name="operator" value="" type="select" from="${['Cliff Gray','Frank Krznaric','Kim Stanley','Jake Kurnot'] }"/>
-    		<jque:dialogField name="cuThicknessDist" value="" />
+    		<jque:dialogField name="minCuDeposit" value="" />
+    		<jque:dialogField name="maxCuDeposit" value="" />
     		</jque:newDialog>   
     		
-    		<jque:newDialog controller='job' action="workOrder" ajax="false" id='pth' title="PEP Variables" success="s_div2" width="600">
-    		<jque:dialogField name="workorder" value="" />
-    		<jque:dialogField name="mean" value="" />
-    		</jque:newDialog>  
+    		<jque:newDialog controller='job' action="dcplatingSearch" ajax="false" id='searchDcplating' title="DC Plating Job Search" success="s_div2" width="600">
+    		<jque:dialogField name="jobName" value="" />
+    		</jque:newDialog> 
     		
     		<jque:newDialog controller='job' action="workOrder" ajax="false" id='uniline1' title="PEP Variables" success="s_div2" width="600">
     		<jque:dialogField name="workorder" value="" />
@@ -100,10 +100,15 @@
                             <g:if test = "${machineInstance.name == 'DC Plating'}">
                             <div class="job" style = "float:left"> 
                    	 		<jque:newShowDialog buttonCaption="DC Plating" dialogId="dcplating" />
-               				</div>    
+               				</div>  
+               				
+               				<div class="job" style = "float:right">
+               				<jque:newShowDialog buttonCaption="Search Job for DC Plating" dialogId="searchDcplating" /> 
+               				</div>
                             </g:if>
                             
                             <g:if test = "${machineInstance.name == 'PTH'}">
+                            
                             <div class="job" style = "float:right"> 
                    	 		<jque:newShowDialog buttonCaption="Plate Through" dialogId="pth" />
                				</div>    
