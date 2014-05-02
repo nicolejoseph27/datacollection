@@ -2,6 +2,7 @@ package magnetboard
 
 class MachineVariable {
 	
+	
 	Date airQuality_date
 	String airQuality_operator
 	String airQuality_spray
@@ -57,6 +58,5 @@ class MachineVariable {
 		airQuality_4cameraHumid(nullable:true)
 		airQuality_4cameraPressure(nullable:true)
 }
-		
-	
+
 }

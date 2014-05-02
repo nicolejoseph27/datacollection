@@ -17,6 +17,16 @@ class JobController {
         params.max = Math.min(params.max ? params.int('max') : 15, 100)
         [jobInstanceList: Job.list(params), jobInstanceTotal: Job.count()]
     }
+	
+	def pepData = {
+		def jobInstance = Job.findAllByPepMeanIsNotNull()
+		jobInstance.sort{it.pepDate}
+		def pep = []
+		jobInstance.each {
+		pep << [it.pepDate, it.pepMean]
+		}
+		[jobInstance: jobInstance,pep: pep]
+	}
 
     def create = {
         def jobInstance = new Job()
@@ -103,9 +113,9 @@ class JobController {
 		def jobNumber = magnetboard.Job.findByWorkorder(params.workorder)
 			def jobInstance = Job.get(jobNumber.id)
 			def today = new Date()
-			jobInstance.PEP_mean = params.mean	
-			jobInstance.PEP_operator = params.operator
-			jobInstance.PEP_date = today
+			jobInstance.pepMean = params.mean	
+			jobInstance.pepOperator = params.operator
+			jobInstance.pepDate = today
 			redirect(controller: "machine", action: "addJobDataList")		
 		}
 		else {
@@ -114,19 +124,38 @@ class JobController {
 		}	
 	}
 	
+	def pluritec = {
+		if(magnetboard.Job.findByWorkorder(params.workorder)){
+		def jobNumber = magnetboard.Job.findByWorkorder(params.workorder)
+			def jobInstance = Job.get(jobNumber.id)
+			def today = new Date()
+			jobInstance.pluritecXcomp = params.Xcomp
+			jobInstance.pluritecYcomp = params.Ycomp
+			jobInstance.pluritecOperator = params.operator
+			jobInstance.pluritecDate = today
+			redirect(controller: "machine", action: "addJobDataList")
+		}
+		else {
+			flash.message =  "NO WORK ORDER FOUND"
+			redirect(controller: "machine", action: "addJobDataList")
+		}
+	}
+	
 	def dcplating = {
 		if(magnetboard.Job.findByWorkorder(params.workorder)){
 		def jobNumber = magnetboard.Job.findByWorkorder(params.workorder)
 			def jobInstance = Job.get(jobNumber.id)
 			def today = new Date()
-			jobInstance.DC_cell = params.cell
-			jobInstance.DC_date = today
-			jobInstance.DC_A_T = params.areaTop
-			jobInstance.DC_A_B = params.areaBottom
-			jobInstance.DC_spec = params.spec
-			jobInstance.DC_operator = params.operator
-			jobInstance.DC_minCuDeposit = params.minCuDeposit
-			jobInstance.DC_maxCuDeposit = params.maxCuDeposit
+			jobInstance.dcCell = params.cell
+			jobInstance.dcDate = today
+			jobInstance.dcAt = params.areaTop
+			jobInstance.dcAb = params.areaBottom
+			jobInstance.dcSpec = params.spec
+			jobInstance.dcOperator = params.operator
+			jobInstance.dcMinCuDeposit = params.minCuDeposit
+			jobInstance.dcMaxCuDeposit = params.maxCuDeposit
+			jobInstance.dcAsf = params.asf
+			jobInstance.dcTct = params.totalCopperTime
 		    redirect(controller: "machine", action: "addJobDataList")
 		}
 		else {
@@ -136,9 +165,18 @@ class JobController {
 	}
 	
 	def dcplatingSearch = {
+		if(magnetboard.Job.findByJobname(params.jobName)){
 		def searchJob = magnetboard.Job.findAllWhere(["jobname": params.jobName])
-		println searchJob
-		redirect(controller: "machine", action: "addJobDataList")
+		searchJob.sort{it.dcDate}
+		def jobSearch = []
+		searchJob.each {
+		jobSearch << [it.dcDate, it.dcAsf, it.dcTct, it.dcCell, it.dcMinCuDeposit, it.dcMaxCuDeposit]
+		}
+		[searchJob: searchJob, jobSearch: jobSearch]
+		}
+		else {flash.message = "No Job Found"
+			  redirect(controller: "machine", action: "addJobDataList")
+			}
 	}
     def update = {
         def jobInstance = Job.get(params.id)

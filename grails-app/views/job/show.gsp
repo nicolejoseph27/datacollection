@@ -119,64 +119,92 @@
                             
                             <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "notes")}</td>
                             
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.PEP_mean.label" default="PEP mean"/></td>
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.material.label" default="material"/></td>
                             
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "PEP_mean")}</td>
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "material")}</td>
+                       </tr>
+                       
+                       <tr>
+                       <td valign="top" class="name" style="text-align:right"><g:message code="job.pepMean.label" default="PEP mean"/></td>
+                            
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "pepMean")}</td>
                        </tr>
                        
                        <tr class="prop">
                             
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.PEP_operator.label" default="PEP Operator" /></td>
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.pepOperator.label" default="PEP Operator" /></td>
                             
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "PEP_operator")}</td>
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "pepOperator")}</td>
                             
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.PEP_date.label" default="PEP date"/></td>
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.pepDate.label" default="PEP date"/></td>
                             
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "PEP_date")}</td> 
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "pepDate")}</td> 
                         </tr>
                     
                        
                        <tr class="prop">
                             
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_date.label" default="DC Plating Date" /></td>
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.dcDate.label" default="DC Plating Date" /></td>
                             
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_date")}</td>
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "dcDate")}</td>
                             
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_cell.label" default="DC Plating cell" /></td>
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.dcCell.label" default="DC Plating cell" /></td>
                             
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_cell")}</td>        
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "dcCell")}</td>        
                         </tr>
                     
                         <tr class="prop2">
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_A_T.label" default="DC Plating Area Top"/></td>
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.dcAt.label" default="DC Plating Area Top"/></td>
                             
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_A_T")}</td>
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "dcAt")}</td>
                             
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_A_B.label" default="DC Plating Area Bottom"/></td>
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.dcAb.label" default="DC Plating Area Bottom"/></td>
                             
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_A_B")}</td>
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "dcAb")}</td>
                        </tr>
                        
                        <tr class="prop">
                             
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_spec.label" default="DC Plating spec" /></td>
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.dcSpec.label" default="DC Plating spec" /></td>
                             
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_spec")}</td>
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "dcSpec")}</td>
                             
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_operator.label" default="DC Plating operator" /></td>
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.dcOperator.label" default="DC Plating operator" /></td>
                             
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_operator")}</td>        
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "dcOperator")}</td>        
                         </tr>
-                    
-                    	 <tr class="prop">
+                        
+                        <tr class="prop">
                             
-                           <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_minCuDeposit.label" default="DC Plating Minimum Cu Deposit"/></td>
+                           <td valign="top" class="name" style="text-align:right"><g:message code="job.dcMinCuDeposit.label" default="DC Plating Minimum Cu Deposit"/></td>
                             
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_minCuDeposit")}</td>
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "dcMinCuDeposit")}</td>
                             
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.DC_maxCuDeposit.label" default="DC Plating Maximum Cu Deposit"/></td>
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.dcMaxCuDeposit.label" default="DC Plating Maximum Cu Deposit"/></td>
                             
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "DC_maxCuDeposit")}</td>
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "dcMaxCuDeposit")}</td>
+                        </tr>
+                        
+                        <tr class="prop">
+                            
+                           <td valign="top" class="name" style="text-align:right"><g:message code="job.pluritecOperator.label" default="Plurietc Operator"/></td>
+                            
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "pluritecOperator")}</td>
+                            
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.pluritecDate.label" default="Pluritec Date"/></td>
+                            
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "pluritecDate")}</td>
+                        </tr>
+                        
+                        <tr class="prop">
+                            
+                           <td valign="top" class="name" style="text-align:right"><g:message code="job.pluritecXcomp.label" default="Plurietc X comp"/></td>
+                            
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "pluritecXcomp")}</td>
+                            
+                            <td valign="top" class="name" style="text-align:right"><g:message code="job.pluritecYcomp.label" default="Pluritec Y comp"/></td>
+                            
+                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "pluritecYcomp")}</td>
                         </tr>
                    
                     </tbody>

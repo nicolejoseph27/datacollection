@@ -185,6 +185,12 @@
                                 <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'workorder', 'errors')}">
                                     <g:textField name="workorder" value="${jobInstance?.workorder}" />
                                 </td>
+                                <td valign="top" class="name">
+                                    <label for="material"><g:message code="job.material.label" default="Material" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'material', 'errors')}">
+                                    <g:select name="material" from="${['TaconicRF35','370HR','4013','FLEX','Polyimide','Rogers4003','other']}" value="${jobInstance?.material}" />
+                                </td>
                             </tr>
                         
                         </tbody>

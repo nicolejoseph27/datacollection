@@ -19,37 +19,50 @@ String nooflayers
 String noboardsperpanel
 String size
 String cam
+String material
 String projectmanager
 String salescontact
 String noofboardsordered
 String noofpanelsmade
 String notes
 Process process
-Date PEP_date
-String PEP_mean
-String PEP_operator
-String DC_cell
-String DC_A_T
-String DC_A_B
-String DC_spec
-String DC_operator
-String DC_minCuDeposit
-String DC_maxCuDeposit
-Date DC_date
-
+Date pepDate
+String pepMean
+String pepOperator
+String dcCell
+String dcAt
+String dcAb
+String dcSpec
+String dcOperator
+String dcMinCuDeposit
+String dcMaxCuDeposit
+String dcAsf
+String dcTct
+Date dcDate
+Date pluritecDate
+String pluritecOperator
+String pluritecXcomp
+String pluritecYcomp
 
 static constraints = {process(nullable:true)
-					PEP_mean(nullable:true)
-					PEP_operator(nullable:true)
-					DC_cell(nullable:true)
-					DC_A_T(nullable:true)
-					DC_A_B(nullable:true)
-					DC_spec(nullable:true)
-					DC_operator(nullable:true)
-					DC_minCuDeposit(nullable:true)
-					DC_maxCuDeposit(nullable:true)
-					DC_date(nullable:true)
-					PEP_date(nullable:true)
+					pepMean(nullable:true)
+					pepOperator(nullable:true)
+					dcCell(nullable:true)
+					dcAt(nullable:true)
+					dcAb(nullable:true)
+					dcSpec(nullable:true)
+					dcOperator(nullable:true)
+					dcMinCuDeposit(nullable:true)
+					dcMaxCuDeposit(nullable:true)
+					dcDate(nullable:true)
+					pepDate(nullable:true)
+					dcAsf(nullable:true)
+					dcTct(nullable:true)
+					pluritecDate(nullable:true)
+					pluritecOperator(nullable:true)
+					pluritecXcomp(nullable:true)
+					pluritecYcomp(nullable:true)
+					material(nullable:true)
 }
 
 double getScrubbedTotalValue() {

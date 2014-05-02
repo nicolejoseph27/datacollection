@@ -80,7 +80,11 @@
     		<jque:dialogField name="fourCameraPressure" value="" />
     		</jque:dialogTab>
     		</jque:newDialog> 
-    
+    		
+    		<jque:newDialog controller='machineVariable' action="pluritec" ajax="false" id='pluritec' title="Pluritec" success="s_div2" width="1000">
+    		<jque:checkBoxField name="pluritecMaintenance" label= "1. Vacuum dust and chips from granite surfaces and table bed. 2. Inspect and clean rubber center gasket to maintain suction efficiency of table bed."/>
+    		</jque:newDialog>
+    		
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -98,7 +102,10 @@
                				</div>
                             <div class="job" style = "float:left"> 
                    	 		<jque:newShowDialog buttonCaption="Air Quality" dialogId="airquality" />
-               				</div>      
+               				</div> 
+               				<div class="job" style = "float:right"> 
+                   	 		<jque:newShowDialog buttonCaption="Pluritec" dialogId="pluritec" />
+               				</div>         
                             </g:if>
                                        
                     </g:each>

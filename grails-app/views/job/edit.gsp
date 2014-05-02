@@ -174,70 +174,85 @@
                                     <g:textField name="workorder" value="${jobInstance?.workorder}" />
                                 </td>
                                  <td valign="top" class="name">
-                                    <label for="PEP_mean"><g:message code="job.PEP_mean.label" default="PEP mean" /></label>
+                                    <label for="pepMean"><g:message code="job.pepMean.label" default="PEP mean" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'PEP_mean', 'errors')}">
-                                    <g:textField name="PEP_mean" value="${jobInstance?.PEP_mean}" />
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'pepMean', 'errors')}">
+                                    <g:textField name="pepMean" value="${jobInstance?.pepMean}" />
                                 </td>
                                 
                            <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="DC_date"><g:message code="job.DC_date.label" default="DC Plating Date" /></label>
+                                  <label for="dcDate"><g:message code="job.DC_date.label" default="DC Plating Date" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'DC_date', 'errors')}">
-                                    <g:textField name="DC_date" value="${jobInstance?.DC_date}" />
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcDate', 'errors')}">
+                                    <g:textField name="dcDate" value="${jobInstance?.dcDate}" />
                                 </td>
                                  <td valign="top" class="name">
-                                  <label for="DC_cell"><g:message code="job.DC_cell.label" default="DC Plating cell" /></label>
+                                  <label for="dcCell"><g:message code="job.dcCell.label" default="DC Plating cell" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'DC_cell', 'errors')}">
-                                    <g:textField name="DC_cell" value="${jobInstance?.DC_cell}" />
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcCell', 'errors')}">
+                                    <g:textField name="dcCell" value="${jobInstance?.dcCell}" />
                                 </td>
                             </tr>
                         
                             <tr class="prop2">
                                 <td valign="top" class="name">
-                                  <label for="DC_A_T"><g:message code="job.DC_A_T.label" default="DC Plating A_T" /></label>
+                                  <label for="dcAt"><g:message code="job.dcAt.label" default="DC Plating A_T" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'DC_A_T', 'errors')}">
-                                    <g:textField name="DC_A_T" value="${jobInstance?.DC_A_T}" />
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcAt', 'errors')}">
+                                    <g:textField name="dcAt" value="${jobInstance?.dcAt}" />
                                 </td>
                                  <td valign="top" class="name">
-                                    <label for="DC_A_B"><g:message code="job.DC_A_B.label" default="DC Plating A_B" /></label>
+                                    <label for="dcAb"><g:message code="job.dcAb.label" default="DC Plating A_B" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'DC_A_B', 'errors')}">
-                                    <g:textField name="DC_A_B" value="${jobInstance?.DC_A_B}" />
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcAb', 'errors')}">
+                                    <g:textField name="dcAb" value="${jobInstance?.dcAb}" />
                                 </td>
                                 
                            <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="DC_spec"><g:message code="job.DC_spec.label" default="DC Plating spec" /></label>
+                                  <label for="dcSpec"><g:message code="job.dcSpec.label" default="DC Plating spec" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'DC_spec', 'errors')}">
-                                    <g:textField name="DC_spec" value="${jobInstance?.DC_spec}" />
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcSpec', 'errors')}">
+                                    <g:textField name="dcSpec" value="${jobInstance?.dcSpec}" />
                                 </td>
                                  <td valign="top" class="name">
-                                  <label for="DC_operator"><g:message code="job.DC_operator.label" default="DC Plating Operator" /></label>
+                                  <label for="dcOperator"><g:message code="job.dcOperator.label" default="DC Plating Operator" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'DC_operator', 'errors')}">
-                                    <g:textField name="DC_operator" value="${jobInstance?.DC_operator}" />
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcOperator', 'errors')}">
+                                    <g:textField name="dcOperator" value="${jobInstance?.dcOperator}" />
                                 </td>
                             </tr>
                         
                             <tr class="prop2">
                                 <td valign="top" class="name">
-                                  <label for="DC_minCuDeposit"><g:message code="DC_minCuDeposit.label" default="DC Plating minimum Cu Deposit" /></label>
+                                  <label for="dcMinCuDeposit"><g:message code="dcMinCuDeposit.label" default="DC Plating minimum Cu Deposit" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'DC_minCuDeposit', 'errors')}">
-                                    <g:textField name="DC_minCuDeposit" value="${jobInstance?.DC_minCuDeposit}" />
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcMinCuDeposit', 'errors')}">
+                                    <g:textField name="dcMinCuDeposit" value="${jobInstance?.dcMinCuDeposit}" />
                                 </td>
                                 
                                 <td valign="top" class="name">
-                                  <label for="DC_maxCuDeposit"><g:message code="DC_maxCuDeposit.label" default="DC Plating maximum Cu Deposit" /></label>
+                                  <label for="dcMaxCuDeposit"><g:message code="dcMaxCuDeposit.label" default="DC Plating maximum Cu Deposit" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'DC_maxCuDeposit', 'errors')}">
-                                    <g:textField name="DC_maxCuDeposit" value="${jobInstance?.DC_maxCuDeposit}" />
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcMaxCuDeposit', 'errors')}">
+                                    <g:textField name="dcMaxCuDeposit" value="${jobInstance?.dcMaxCuDeposit}" />
                                 </td>
+                              
+                              <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="dcAsf"><g:message code="job.dcAsf.label" default="DC ASF" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcAsf', 'errors')}">
+                                    <g:textField name="dcAsf" value="${jobInstance?.dcAsf}" />
+                                </td>
+                                 <td valign="top" class="name">
+                                  <label for="dcTct"><g:message code="job.dcTct.label" default="DC Total Copper Time" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcTct', 'errors')}">
+                                    <g:textField name="dcTct" value="${jobInstance?.dcTct}" />
+                                </td>
+                            </tr>
                               
                         </tbody>
                     </table>

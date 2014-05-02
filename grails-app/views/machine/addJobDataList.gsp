@@ -54,6 +54,13 @@
     		<jque:dialogField name="operator" value="" type="select" from="${['Adrian Smith','Brian Emerschak','Ed Norcott','Jake Kurnot','Carlos Harrison','Becky Brunner','Joe Pawlowski','Mark Husarik','Bob Gosliak','Cindy Stemmler','Beth Lang','Cliff Gray','Joel Williams','Melissa Knight','Jesse Ward','Gerry Glatz','Oscar Curtis','Matt Shirey'] }"/>
     		</jque:newDialog> 
     		
+    		<jque:newDialog controller='job' action="pluritec" ajax="false" id='pluritec' title="Pluritec Variables" success="s_div2" width="600">
+    		<jque:dialogField name="workorder" value="" />
+    		<jque:dialogField name="Xcomp" value="" />
+    		<jque:dialogField name="Ycomp" value="" />
+    		<jque:dialogField name="operator" value="" type="select" from="${['Matt Shirey','Scott Zaboski','Bob Atkinson','Ken Gulick','Jason Gale'] }"/>
+    		</jque:newDialog> 
+    		
     		<jque:newDialog controller='job' action="dcplating" ajax="false" id='dcplating' title="DC Plating Variables" success="s_div2" width="600">
     		<jque:dialogField name="workorder" value="" />
     		<jque:dialogField name="cell" value="" />
@@ -63,6 +70,8 @@
     		<jque:dialogField name="operator" value="" type="select" from="${['Cliff Gray','Frank Krznaric','Kim Stanley','Jake Kurnot'] }"/>
     		<jque:dialogField name="minCuDeposit" value="" />
     		<jque:dialogField name="maxCuDeposit" value="" />
+    		<jque:dialogField name="asf" value="" />
+    		<jque:dialogField name="totalCopperTime" value="" />
     		</jque:newDialog>   
     		
     		<jque:newDialog controller='job' action="dcplatingSearch" ajax="false" id='searchDcplating' title="DC Plating Job Search" success="s_div2" width="600">
@@ -114,9 +123,9 @@
                				</div>    
                             </g:if>
                             
-                            <g:if test = "${machineInstance.name == 'Uniline 1'}">
+                            <g:if test = "${machineInstance.name == 'Pluritec'}">
                             <div class="job" style = "float:left"> 
-                   	 		<jque:newShowDialog buttonCaption="Uniline 1" dialogId="uniline1" />
+                   	 		<jque:newShowDialog buttonCaption="Pluritec" dialogId="pluritec" />
                				</div>    
                             </g:if>
                             

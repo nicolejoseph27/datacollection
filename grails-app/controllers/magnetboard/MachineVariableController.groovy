@@ -9,9 +9,45 @@ class MachineVariableController {
     }
 
     def list = {
-        params.max = Math.min(params.max ? params.int('max') : 10, 100)
-        [machineVariableInstanceList: MachineVariable.list(params), machineVariableInstanceTotal: MachineVariable.count()]
+		def l =  MachineVariable.list(params)
+		def air = []
+		def hall = []
+		def temp = []
+		def humid = []
+		def fiveMicron = []
+		def goldRoom = []
+		def goldRoomFilms = []
+		l.each {
+		air << [it.airQuality_date, it.airQuality_spray, it.airQuality_sprayafterac]
+		}
+		l.each {
+		goldRoom << [it.airQuality_date, it.airQuality_2camera, it.airQuality_4camera]
+		}
+		l.each {
+		goldRoomFilms << [it.airQuality_date, it.airQuality_2camera, it.airQuality_4camera, it.airQuality_films]
+		}
+		l.each {
+		hall << [it.airQuality_date, it.airQuality_spray,  it.airQuality_hall]
+		}
+		l.each {
+		temp << [it.airQuality_date, it.airQuality_sprayTemp,  it.airQuality_2cameraTemp, it.airQuality_4cameraTemp, it.airQuality_filmsTemp]
+		}
+		l.each {
+		humid << [it.airQuality_date, it.airQuality_sprayHumid,  it.airQuality_2cameraHumid, it.airQuality_4cameraHumid, it.airQuality_filmsHumid]
+		}
+		l.each {
+		fiveMicron << [it.airQuality_date, it.airQuality_spray5,  it.airQuality_sprayafterac5, it.airQuality_2camera5, it.airQuality_4camera5, it.airQuality_hall5, it.airQuality_films5]
+		}
+	    params.max = Math.min(params.max ? params.int('max') : 100, 100)
+        [machineVariableInstanceList:l, machineVariableInstanceTotal: MachineVariable.count(),air: air,hall: hall,temp: temp,humid: humid,fiveMicron: fiveMicron,goldRoom: goldRoom,goldRoomFilms: goldRoomFilms]
     }
+	
+	def pluritec = {
+		if (params.pluritecMaintenance)	{
+			flash.message = "Joe Pawlowski"
+		}
+		redirect(controller: "machine", action: "addJobDataList")
+	}
 
     def create = {
         def machineVariableInstance = new MachineVariable()
@@ -40,6 +76,8 @@ class MachineVariableController {
 	}
 	
     def show = {
+		
+		
         def machineVariableInstance = MachineVariable.get(params.id)
         if (!machineVariableInstance) {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'machineVariable.label', default: 'MachineVariable'), params.id])}"
