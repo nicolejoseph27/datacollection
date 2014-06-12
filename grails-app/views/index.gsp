@@ -76,11 +76,10 @@
                    	 <g:link controller="machine" action="list" style="color:#228B22;text-transform:capitalize">List of machines</g:link>
                </div>
                <div class="job" style = "float:right"> 
-                   	 <g:link controller="job" action="pepData" style="color:#228B22;text-transform:capitalize">PEP DATA TEST</g:link>
-               </div>
-               <div style="height:60px"></div>
-               <div class="job" style = "float:left"> 
                    	 <g:link controller="maintenanceOnMachines" action="create" style="color:#228B22;text-transform:capitalize">Maintenance Time</g:link>
+               </div>
+               <div class="job" style = "float:right"> 
+                   	 <g:link controller="maintenanceOnMachines" action="maintenanceGraph" style="color:#228B22;text-transform:capitalize">Maintenance Graph</g:link>
                </div>
 				<!--
                <div class="job" style = "float:left"> 

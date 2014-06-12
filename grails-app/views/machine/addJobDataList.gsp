@@ -63,7 +63,8 @@
     		
     		<jque:newDialog controller='job' action="dcplating" ajax="false" id='dcplating' title="DC Plating Variables" success="s_div2" width="600">
     		<jque:dialogField name="workorder" value="" />
-    		<jque:dialogField name="cell" value="" />
+    		<jque:dialogField name="cells" value="" />
+    		<jque:dialogField name="dcRack" value="" />
     		<jque:dialogField name="areaTop" value="" />
     		<jque:dialogField name="areaBottom" value="" />
     		<jque:dialogField name="spec" value="" />
@@ -72,6 +73,7 @@
     		<jque:dialogField name="maxCuDeposit" value="" />
     		<jque:dialogField name="asf" value="" />
     		<jque:dialogField name="totalCopperTime" value="" />
+    		
     		</jque:newDialog>   
     		
     		<jque:newDialog controller='job' action="dcplatingSearch" ajax="false" id='searchDcplating' title="DC Plating Job Search" success="s_div2" width="600">
@@ -101,11 +103,20 @@
             				<span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
         					</div>   
         					
-                            <div class="job" style = "float:right"> 
+        					<div style="height:60px"></div>
+        					
+                            <div class="job" style = "float:left"> 
                    	 		<jque:newShowDialog buttonCaption="PEP" dialogId="PEP" />
-               				</div>      
+               				</div>
+               				
+               				<div class="job" style = "float:right"> 
+                   	 		<g:link controller="job" action="pepData" style="color:#228B22;text-transform:capitalize">PEP Chart</g:link>
+               				</div>
+               				
+               				<div style="height:60px"></div>
+               				      
                             </g:if>
-                            
+                           
                             <g:if test = "${machineInstance.name == 'DC Plating'}">
                             <div class="job" style = "float:left"> 
                    	 		<jque:newShowDialog buttonCaption="DC Plating" dialogId="dcplating" />
@@ -114,6 +125,8 @@
                				<div class="job" style = "float:right">
                				<jque:newShowDialog buttonCaption="Search Job for DC Plating" dialogId="searchDcplating" /> 
                				</div>
+               				
+               				<div style="height:60px"></div>
                             </g:if>
                             
                             <g:if test = "${machineInstance.name == 'PTH'}">

@@ -12,6 +12,10 @@ class MaintenanceOnMachinesController {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
         [maintenanceOnMachinesInstanceList: MaintenanceOnMachines.list(params), maintenanceOnMachinesInstanceTotal: MaintenanceOnMachines.count()]
     }
+	
+	def maintenanceGraph = {
+		
+	}
 
     def create = {
         def maintenanceOnMachinesInstance = new MaintenanceOnMachines()

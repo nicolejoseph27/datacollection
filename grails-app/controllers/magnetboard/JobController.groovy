@@ -146,7 +146,7 @@ class JobController {
 		def jobNumber = magnetboard.Job.findByWorkorder(params.workorder)
 			def jobInstance = Job.get(jobNumber.id)
 			def today = new Date()
-			jobInstance.dcCell = params.cell
+			jobInstance.dcCell = params.cells
 			jobInstance.dcDate = today
 			jobInstance.dcAt = params.areaTop
 			jobInstance.dcAb = params.areaBottom
@@ -156,6 +156,7 @@ class JobController {
 			jobInstance.dcMaxCuDeposit = params.maxCuDeposit
 			jobInstance.dcAsf = params.asf
 			jobInstance.dcTct = params.totalCopperTime
+			jobInstance.dcRack = params.dcRack
 		    redirect(controller: "machine", action: "addJobDataList")
 		}
 		else {

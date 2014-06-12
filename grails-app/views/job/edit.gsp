@@ -209,6 +209,8 @@
                                     <g:textField name="dcAb" value="${jobInstance?.dcAb}" />
                                 </td>
                                 
+                              </tr>  
+                                
                            <tr class="prop">
                                 <td valign="top" class="name">
                                   <label for="dcSpec"><g:message code="job.dcSpec.label" default="DC Plating spec" /></label>
@@ -238,6 +240,7 @@
                                 <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcMaxCuDeposit', 'errors')}">
                                     <g:textField name="dcMaxCuDeposit" value="${jobInstance?.dcMaxCuDeposit}" />
                                 </td>
+                             </tr>
                               
                               <tr class="prop">
                                 <td valign="top" class="name">
@@ -253,6 +256,15 @@
                                     <g:textField name="dcTct" value="${jobInstance?.dcTct}" />
                                 </td>
                             </tr>
+                            
+                            <tr class="prop2">
+                                <td valign="top" class="name">
+                                  <label for="dcRack"><g:message code="dcRack.label" default="DC Plating Rack" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcRack', 'errors')}">
+                                    <g:textField name="dcRack" value="${jobInstance?.dcRack}" />
+                                </td>
+                             </tr>   
                               
                         </tbody>
                     </table>

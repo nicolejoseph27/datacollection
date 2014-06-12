@@ -39,6 +39,7 @@ String dcMaxCuDeposit
 String dcAsf
 String dcTct
 Date dcDate
+String dcRack
 Date pluritecDate
 String pluritecOperator
 String pluritecXcomp
@@ -58,6 +59,7 @@ static constraints = {process(nullable:true)
 					pepDate(nullable:true)
 					dcAsf(nullable:true)
 					dcTct(nullable:true)
+					dcRack(nullable:true)
 					pluritecDate(nullable:true)
 					pluritecOperator(nullable:true)
 					pluritecXcomp(nullable:true)
@@ -69,4 +71,8 @@ double getScrubbedTotalValue() {
 	if (!totalvalue) return 0.0
 	Double.parseDouble(totalvalue.replaceAll("[\\\$-,-a-zA-Z]",""))
 }
+String toString(){
+	return workorder
+   }
+
 }
