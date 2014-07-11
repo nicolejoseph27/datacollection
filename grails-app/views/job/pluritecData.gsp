@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="layout" content="main" />
-        <g:set var="entityName" value="${message(code: 'pepData.label', default: 'Job')}" />
+        <g:set var="entityName" value="${message(code: 'pluritecData.label', default: 'Job')}" />
         <title><g:message code="default.list.label" args="[entityName]" /></title>
         <script type="text/javascript" src="http://www.google.com/jsapi"></script>
         
@@ -23,23 +23,25 @@
 
     	  var data = new google.visualization.DataTable();
     	  data.addColumn('datetime', 'Short');
-    	  data.addColumn('number', 'PEP Mean');
-    	  data.addColumn('number', 'Average');
-    	  <g:each in="${pep}" var="e" >
-    	  data.addRow([new Date("${e[0]}"),${e[1]},${e[2]}]);
+    	  data.addColumn('number', 'X compensation');
+    	  data.addColumn('number', 'Y compensation');
+    	  data.addColumn('number', 'X average');
+    	  data.addColumn('number', 'Y average');
+    	  <g:each in="${plur}" var="e" >
+    	  data.addRow([new Date("${e[0]}"),${e[1]},${e[2]},${e[3]},${e[4]}]);
 		  </g:each>
     	  
         var options = {
-        	    title: 'PEP Data',
+        	    title: 'Pluritec Data',
         	    curveType: 'function',
         	    legend: { position: 'bottom' }
         	  };
     	  
-        var chart = new google.visualization.LineChart(document.getElementById('pep_div'));
+        var chart = new google.visualization.LineChart(document.getElementById('plur_div'));
         chart.draw(data, options);
       }
 </script>
-        <div id="pep_div" style="width: 1500px; height: 500px;"></div>
+        <div id="plur_div" style="width: 1500px; height: 500px;"></div>
         
 </body>            
     

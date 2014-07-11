@@ -264,6 +264,96 @@
                                     <g:textField name="airQuality_4cameraPressure" value="${machineVariableInstance?.airQuality_4cameraPressure}" />
                                 </td>
                             </tr>
+                            
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="airQualityLayup"><g:message code="machineVariable.airQualityLayup" default="Air Quality Layup" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: machineVariableInstance, field: 'airQualityLayup', 'errors')}">
+                                    <g:textField name="airQualityLayup" value="${machineVariableInstance?.airQualityLayup}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="airQualityLayup5"><g:message code="machineVariable.airQualityLayup5.label" default="Air Quality Layup 5" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: machineVariableInstance, field: 'airQualityLayup5', 'errors')}">
+                                    <g:textField name="airQualityLayup5" value="${machineVariableInstance?.airQualityLayup5}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="airQualityLayupTemp"><g:message code="machineVariable.airQualityLayupTemp.label" default="Air Quality Layup Temperature" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: machineVariableInstance, field: 'airQualityLayupTemp', 'errors')}">
+                                    <g:textField name="airQualityLayupTemp" value="${machineVariableInstance?.airQualityLayupTemp}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="airQualityLayupHumid"><g:message code="machineVariable.airQualityLayupHumid.label" default="Air Quality Layup Humidity" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: machineVariableInstance, field: 'airQualityLayupHumid', 'errors')}">
+                                    <g:textField name="airQualityLayupHumid" value="${machineVariableInstance?.airQualityLayupHumid}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="airQualityLayupPressure"><g:message code="machineVariable.airQualityLayupPressure.label" default="Air Quality Layup Pressure" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: machineVariableInstance, field: 'airQualityLayupPressure', 'errors')}">
+                                    <g:textField name="airQualityLayupPressure" value="${machineVariableInstance?.airQualityLayupPressure}" />
+                                </td>
+                            </tr>
+                            
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="airQualityStaging"><g:message code="machineVariable.airQualityStaging" default="Air Quality Staging Area" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: machineVariableInstance, field: 'airQualityStaging', 'errors')}">
+                                    <g:textField name="airQualityStaging" value="${machineVariableInstance?.airQualityStaging}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="airQualityStaging5"><g:message code="machineVariable.airQualityStaging5.label" default="Air Quality Staging Area 5" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: machineVariableInstance, field: 'airQualityStaging5', 'errors')}">
+                                    <g:textField name="airQualityStaging5" value="${machineVariableInstance?.airQualityStaging5}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="airQualityStagingTemp"><g:message code="machineVariable.airQualityStagingTemp.label" default="Air Quality Staging Temperature" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: machineVariableInstance, field: 'airQualityStagingTemp', 'errors')}">
+                                    <g:textField name="airQualityStagingTemp" value="${machineVariableInstance?.airQualityStagingTemp}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="airQualityStagingHumid"><g:message code="machineVariable.airQualityStagingHumid.label" default="Air Quality Staging Humidity" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: machineVariableInstance, field: 'airQualityStagingHumid', 'errors')}">
+                                    <g:textField name="airQualityStagingHumid" value="${machineVariableInstance?.airQualityStagingHumid}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="airQualityStagingPressure"><g:message code="machineVariable.airQualityStagingPressure.label" default="Air Quality Staging Pressure" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: machineVariableInstance, field: 'airQualityStagingPressure', 'errors')}">
+                                    <g:textField name="airQualityStagingPressure" value="${machineVariableInstance?.airQualityStagingPressure}" />
+                                </td>
+                            </tr>
                         
                         </tbody>
                     </table>
