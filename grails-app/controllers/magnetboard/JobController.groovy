@@ -20,33 +20,14 @@ class JobController {
 	
 	def pepData = {
 		def jobInstance = Job.findAllByPepMeanIsNotNull()
-		def summ = jobInstance.sum{it.numberPepMean}
-		def amount = jobInstance.size()
-		def average = summ/amount
 		jobInstance.sort{it.pepDate}
 		def pep = []
 		jobInstance.each {
-		pep << [it.pepDate, it.pepMean, average]
+		pep << [it.pepDate, it.pepMean]
 		}
 		[jobInstance: jobInstance,pep: pep]
 	}
 
-	def pluritecData = {
-		def jobInstance = Job.findAllByPluritecXcompIsNotNull()
-		def summX = jobInstance.sum{it.numberPluritecXcomp}
-		def summY = jobInstance.sum{it.numberPluritecYcomp}
-		def amount = jobInstance.size()
-		def averageX = summX/amount
-		def averageY = summY/amount
-		jobInstance.sort{it.pluritecDate}
-		def plur = []
-		jobInstance.each {
-			plur << [it.pluritecDate, it.pluritecXcomp, it.pluritecYcomp, averageX, averageY]
-		}
-		[jobInstance: jobInstance,plur: plur]
-		
-	}
-	
     def create = {
         def jobInstance = new Job()
         jobInstance.properties = params
@@ -198,32 +179,6 @@ class JobController {
 			  redirect(controller: "machine", action: "addJobDataList")
 			}
 	}
-	
-	def olEtch = {
-		if(magnetboard.Job.findByWorkorder(params.workorder)){
-		def jobNumber = magnetboard.Job.findByWorkorder(params.workorder)
-			def jobInstance = Job.get(jobNumber.id)
-			def today = new Date()
-			def twBeforeFloat = params.twBefore.toFloat()
-			def twAfterFloat = params.twAfter.toFloat()
-			def lineSpeedFloat = params.lineSpeed.toFloat()
-			def cuThicknessFloat = params.cuThickness.toFloat()
-			jobInstance.olEtchTwBefore = twBeforeFloat	
-			jobInstance.olEtchTwAfter = twAfterFloat
-			jobInstance.olEtchLineSpeed = lineSpeedFloat
-			jobInstance.olEtchCuThickness = cuThicknessFloat
-			jobInstance.olEtchSplash = params.splash
-			jobInstance.olEtchOperator = params.operator
-			jobInstance.olEtchDate = today
-			redirect(controller: "machine", action: "addJobDataList")		
-		}
-		else {
-			flash.message =  "NO WORK ORDER FOUND"
-			redirect(controller: "machine", action: "addJobDataList")
-		}	 
-	}
-	
-	
     def update = {
         def jobInstance = Job.get(params.id)
 		def process1 = jobInstance.process?.canister

@@ -23,10 +23,9 @@
 
     	  var data = new google.visualization.DataTable();
     	  data.addColumn('datetime', 'Short');
-    	  data.addColumn('number', 'PEP Mean');
-    	  data.addColumn('number', 'Average');
+    	  data.addColumn('number', 'Mean');
     	  <g:each in="${pep}" var="e" >
-    	  data.addRow([new Date("${e[0]}"),${e[1]},${e[2]}]);
+    	  data.addRow([new Date("${e[0]}"),${e[1]}]);
 		  </g:each>
     	  
         var options = {

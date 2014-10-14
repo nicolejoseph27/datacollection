@@ -68,25 +68,21 @@
     		<jque:dialogField name="areaTop" value="" />
     		<jque:dialogField name="areaBottom" value="" />
     		<jque:dialogField name="spec" value="" />
-    		<jque:dialogField name="operator" value="" type="select" from="${['Cliff Gray','Frank Krznaric','Kim Stanley','Jake Kurnot','Jason Persun'] }"/>
+    		<jque:dialogField name="operator" value="" type="select" from="${['Cliff Gray','Frank Krznaric','Kim Stanley','Jake Kurnot'] }"/>
     		<jque:dialogField name="minCuDeposit" value="" />
     		<jque:dialogField name="maxCuDeposit" value="" />
     		<jque:dialogField name="asf" value="" />
-    		<jque:dialogField name="totalCopperTime" value="" />    		
+    		<jque:dialogField name="totalCopperTime" value="" />
+    		
     		</jque:newDialog>   
     		
     		<jque:newDialog controller='job' action="dcplatingSearch" ajax="false" id='searchDcplating' title="DC Plating Job Search" success="s_div2" width="600">
     		<jque:dialogField name="jobName" value="" />
     		</jque:newDialog> 
     		
-    		<jque:newDialog controller='job' action="olEtch" ajax="false" id='oletch' title="Outer Layer Etch" success="s_div2" width="600">
+    		<jque:newDialog controller='job' action="workOrder" ajax="false" id='uniline1' title="PEP Variables" success="s_div2" width="600">
     		<jque:dialogField name="workorder" value="" />
-    		<jque:dialogField name="twBefore" value="" />
-    		<jque:dialogField name="twAfter" value="" />
-    		<jque:dialogField name="lineSpeed" value="" />
-    		<jque:dialogField name="cuThickness" value="" />
-    		<jque:checkBoxField name="splash" type="checkbox" labelName="Were the panels splashed"  checked="${false}" />
-    		<jque:dialogField name="operator" value="" type="select" from="${['Cliff Gray','Frank Krznaric','Kim Stanley','Jake Kurnot','Don Lang','Pete Sullivan','Oscar Curtis'] }"/>
+    		<jque:dialogField name="mean" value="" />
     		</jque:newDialog>  
     		
     		<jque:newDialog controller='job' action="workOrder" ajax="false" id='4cam' title="PEP Variables" success="s_div2" width="600">
@@ -143,18 +139,12 @@
                             <g:if test = "${machineInstance.name == 'Pluritec'}">
                             <div class="job" style = "float:left"> 
                    	 		<jque:newShowDialog buttonCaption="Pluritec" dialogId="pluritec" />
-               				</div>
-               				<div class="job" style = "float:right"> 
-                   	 		<g:link controller="job" action="pluritecData" style="color:#228B22;text-transform:capitalize">Pluritec Chart</g:link>
-               				</div>  
-               				<div style="height:60px"></div>  
+               				</div>    
                             </g:if>
                             
-                      
-                            
-                            <g:if test = "${machineInstance.name == 'Outer Etch'}">
-                            <div class="job" style = "float:left"> 
-                   	 		<jque:newShowDialog buttonCaption="Outer Etch" dialogId="oletch" />
+                            <g:if test = "${machineInstance.name == '4-Camera Olec'}">
+                            <div class="job" style = "float:right"> 
+                   	 		<jque:newShowDialog buttonCaption="4-Camera Olec" dialogId="4cam" />
                				</div> 
                				
                				

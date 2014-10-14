@@ -212,47 +212,6 @@
                             
                             <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "pluritecYcomp")}</td>
                         </tr>
-                        
-                        <tr class="prop">
-                            
-                           <td valign="top" class="name" style="text-align:right"><g:message code="job.olEtchOperator.label" default="Outer Layer Etch Operator"/></td>
-                            
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "olEtchOperator")}</td>
-                            
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.olEtchDate.label" default="Outer Layer Etch Date"/></td>
-                            
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "olEtchDate")}</td>
-                        </tr>
-                        
-                        <tr class="prop2">
-                            
-                           <td valign="top" class="name" style="text-align:right"><g:message code="job.olEtchTwBefore.label" default="Trace Width Before Outer Layer Etch"/></td>
-                            
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "olEtchTwBefore")}</td>
-                            
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.olEtchTwAfter.label" default="Trace Width After Outer Layer Etch"/></td>
-                            
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "olEtchTwAfter")}</td>
-                        </tr>
-                        
-                        <tr class="prop">
-                            
-                           <td valign="top" class="name" style="text-align:right"><g:message code="job.olEtchCuThickness.label" default="Cu Thickness at Outer Layer Etch"/></td>
-                            
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "olEtchCuThickness")}</td>
-                            
-                            <td valign="top" class="name" style="text-align:right"><g:message code="job.olEtchSplash.label" default="Did panels need splashed?"/></td>
-                            
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "olEtchSplash")}</td>
-                        </tr>
-                        
-                        <tr class="prop2">
-                            
-                           <td valign="top" class="name" style="text-align:right"><g:message code="job.olEtchLineSpeed.label" default="Line Speed of Outer Layer Etch"/></td>
-                            
-                            <td valign="top" class="value" style="text-align:center">${fieldValue(bean: jobInstance, field: "olEtchLineSpeed")}</td>
-                                
-                        </tr>
                    
                     </tbody>
                 </table>

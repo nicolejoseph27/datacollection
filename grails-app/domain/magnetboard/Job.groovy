@@ -2,7 +2,7 @@ package magnetboard
 
 class Job {
 	
-	static transients = ['scrubbedTotalValue','numberPepMean','numberPluritecXcomp','numberPluritecYcomp']
+	static transients = ['scrubbedTotalValue']
 	
 	static belongsTo = Process
 	
@@ -44,15 +44,6 @@ Date pluritecDate
 String pluritecOperator
 String pluritecXcomp
 String pluritecYcomp
-Date olEtchDate
-String olEtchOperator
-Float olEtchTwBefore
-Float olEtchTwAfter
-Float olEtchLineSpeed
-Float olEtchCuThickness
-Boolean olEtchSplash
-
-
 
 static constraints = {process(nullable:true)
 					pepMean(nullable:true)
@@ -74,32 +65,12 @@ static constraints = {process(nullable:true)
 					pluritecXcomp(nullable:true)
 					pluritecYcomp(nullable:true)
 					material(nullable:true)
-					olEtchDate(nullable:true)
-					olEtchOperator(nullable:true)
-					olEtchTwBefore(nullable:true)
-					olEtchTwAfter(nullable:true)
-					olEtchLineSpeed(nullable:true)
-					olEtchCuThickness(nullable:true)
-					olEtchSplash(nullable:true)
 }
 
 double getScrubbedTotalValue() {
 	if (!totalvalue) return 0.0
 	Double.parseDouble(totalvalue.replaceAll("[\\\$-,-a-zA-Z]",""))
 }
-
-double getnumberPepMean() {
-	pepMean.toDouble()
-}
-
-double getnumberPluritecXcomp() {
-	pluritecXcomp.toDouble()
-}
-
-double getnumberPluritecYcomp() {
-	pluritecYcomp.toDouble()
-}
-
 String toString(){
 	return workorder
    }

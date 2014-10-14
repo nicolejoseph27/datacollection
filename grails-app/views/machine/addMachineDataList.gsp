@@ -79,18 +79,6 @@
     		<jque:dialogField name="fourCameraHumidity" value="" />
     		<jque:dialogField name="fourCameraPressure" value="" />
     		</jque:dialogTab>
-    		<jque:dialogTab caption="Layup Area">
-    		<jque:dialogField name="layup" value="" />
-    		<jque:dialogField name="layup5" value="" />
-    		<jque:dialogField name="layupTemperature" value="" />
-    		<jque:dialogField name="layupHumidity" value="" />
-    		<jque:dialogField name="layupPressure" value="" />
-    		<jque:dialogField name="staging" value="" />
-    		<jque:dialogField name="staging5" value="" />
-    		<jque:dialogField name="stagingTemperature" value="" />
-    		<jque:dialogField name="stagingHumidity" value="" />
-    		<jque:dialogField name="stagingPressure" value="" />
-    		</jque:dialogTab>
     		</jque:newDialog> 
     		
     		<jque:newDialog controller='machineVariable' action="pluritec" ajax="false" id='pluritec' title="Pluritec" success="s_div2" width="1000">

@@ -33,11 +33,7 @@
         var options = {
         	    title: 'Particles in the Goldroom and Films',
         	    curveType: 'function',
-        	    legend: { position: 'bottom' },
-       			 vAxis: {viewWindow: {
-           			 max: 100000,
-           			 min:0}
-       			 }
+        	    legend: { position: 'bottom' }
         	  };
     	  
         var chart = new google.visualization.LineChart(document.getElementById('goldRoomFilms_div'));
@@ -63,9 +59,7 @@
         var options = {
         	    title: 'Particles in the Goldroom',
         	    curveType: 'function',
-        	    legend: { position: 'bottom' },
-        	    vAxis: {viewWindow: {max: 30000, min:0}}
-        	    
+        	    legend: { position: 'bottom' }
         	  };
     	  
         var chart = new google.visualization.LineChart(document.getElementById('goldRoom_div'));
@@ -203,8 +197,7 @@
         var options = {
         	    title: 'Five Micron Particles',
         	    curveType: 'function',
-        	    legend: { position: 'bottom' },
-        	    vAxis: {viewWindow: {min:0, max:500}}
+        	    legend: { position: 'bottom' }
         	  };
     	  
         var chart = new google.visualization.LineChart(document.getElementById('fiveMicron_div'));

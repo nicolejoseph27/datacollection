@@ -264,28 +264,7 @@
                                 <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'dcRack', 'errors')}">
                                     <g:textField name="dcRack" value="${jobInstance?.dcRack}" />
                                 </td>
-                                <td valign="top" class="name">
-                                  <label for="pluritecXcomp"><g:message code="job.pluritecXcomp.label" default="pluritecXcomp" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'pluritecXcomp', 'errors')}">
-                                    <g:textField name="pluritecXcomp" value="${jobInstance?.pluritecXcomp}" />
-                                </td>
-                             </tr> 
-                             
-                             <tr class="prop">
-                                <td valign="top" class="name">
-                                  <label for="pluritecYcomp"><g:message code="pluritecYcomp.label" default="pluritecYcomp" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'pluritecYcomp', 'errors')}">
-                                    <g:textField name="pluritecYcomp" value="${jobInstance?.pluritecYcomp}" />
-                                </td>
-                                <td valign="top" class="name">
-                                  <label for="pluritecOperator"><g:message code="job.pluritecOperator.label" default="pluritecOperator" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: jobInstance, field: 'pluritecOperator', 'errors')}">
-                                    <g:textField name="pluritecOperator" value="${jobInstance?.pluritecOperator}" />
-                                </td>
-                             </tr>     
+                             </tr>   
                               
                         </tbody>
                     </table>

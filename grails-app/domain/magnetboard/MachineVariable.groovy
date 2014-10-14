@@ -29,16 +29,6 @@ class MachineVariable {
 	String airQuality_filmsTemp
 	String airQuality_filmsHumid
 	String airQuality_filmsPressure
-	String airQualityLayup
-	String airQualityLayup5
-	String airQualityLayupTemp
-	String airQualityLayupHumid
-	String airQualityLayupPressure
-	String airQualityStaging
-	String airQualityStaging5
-	String airQualityStagingTemp
-	String airQualityStagingHumid
-	String airQualityStagingPressure
 	
 	static constraints = {
 		airQuality_date(nullable:true)
@@ -67,17 +57,6 @@ class MachineVariable {
 		airQuality_4cameraTemp(nullable:true)
 		airQuality_4cameraHumid(nullable:true)
 		airQuality_4cameraPressure(nullable:true)
-		airQualityLayup(nullable:true)
-		airQualityLayup5(nullable:true)
-		airQualityLayupTemp(nullable:true)
-		airQualityLayupHumid(nullable:true)
-		airQualityLayupPressure(nullable:true)
-		airQualityStaging(nullable:true)
-		airQualityStaging5(nullable:true)
-		airQualityStagingTemp(nullable:true)
-		airQualityStagingHumid(nullable:true)
-		airQualityStagingPressure(nullable:true)
-				
 }
 
 }
